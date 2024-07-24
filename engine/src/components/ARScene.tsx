@@ -83,7 +83,7 @@ const ARScene = ({
       formData.append('file', blob, 'screenshot.png');
   
       // Upload the file
-      const response = await fetch('http://localhost:3000/api/v1/photo-booth', {
+      const response = await fetch(`${process.env.BACKURL}:3000/api/v1/photo-booth`, {
         method: 'POST',
         body: formData,
       });
